@@ -16,7 +16,7 @@ public class SearchSubject {
         WebDriver webDriver= new ChromeDriver();
         webDriver.navigate().to("https://www3.reg.cmu.ac.th/regist259/public/search.php");
         assertThat(webDriver.getTitle()).contains("Student Enrollment 2559");
-        // click on international button
+        // click on international button (find it and then click it.)
         WebElement interButton = webDriver.findElement(By.cssSelector("body > center > table > tbody > tr:nth-child(4) > td > form > table:nth-child(3) > tbody > tr:nth-child(2) > td:nth-child(1) > form > input[type=\"submit\"]:nth-child(1)"));
         interButton.click();
         assertThat(webDriver.getTitle()).contains("Search");
